@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Qualifications</title>
+    <style>
+       
+        body {
+            height: 100vh;
+            width: 100vw;
+        }
+
+        #sect ul {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 25vh;
+        }
+
+        .sectItem {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            width: 22vw;
+            height: 25vh;
+            margin: 1vw;
+            position: relative;
+            top: 20px;
+            text-align: center;
+            border: 2px solid black;
+            border-radius: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.8rem;
+            cursor: pointer;
+            background-color: rgb(233, 85, 49);
+            color: white;
+        }
+
+        .sectItem:hover {
+            color: black;
+            background-color: rgb(241, 182, 202);
+            font-size: 1.9rem;
+            box-shadow: 4px 5px rgb(146, 145, 148);
+            transform: scale(20px);
+        }
+
+        .def {
+            position: relative;
+            top: 20px;
+            text-align: center;
+            color: red;
+        }
+
+        .def p {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 1.8rem;
+            
+        }
+        #prim{
+            display: flex;  
+            align-items: center;
+            justify-content: center;
+            
+        }
+        #prim div p{
+            width: 50vw;
+           
+           
+          
+        }
+        #prim div{
+         
+            width: 60vw;
+           
+            position: absolute;
+            top: 40vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 4px 5px 4px rgb(146, 145, 148);
+            border-radius:20px;
+            padding: 20px;
+            background: url("back.jpg");
+        }
+        
+       
+        #sec{
+            display: flex;
+           
+            align-items: center;
+            justify-content: center;
+        }
+        #sec div p{
+            width: 50vw;
+           
+           
+          
+        }
+        #sec div{
+            width: 60vw;
+           
+            position: absolute;
+            top: 40vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 4px 5px 4px rgb(146, 145, 148);
+            border-radius:20px;
+            padding: 20px;
+            background: url("back.jpg");
+        }
+        #hsec{
+            display: flex;      
+            align-items: center;
+            justify-content: center;
+        }
+        #hsec div p{
+            width: 50vw; 
+        }
+        #hsec div{
+            width: 65vw;
+          
+            position: absolute;
+            top: 40vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 4px 5px 4px rgb(146, 145, 148);
+            border-radius:20px;
+            padding: 20px;
+            background: url("back.jpg");
+        }
+        #grad{
+            display: flex;      
+            align-items: center;
+            justify-content: center;
+        }
+        #grad div p{
+            width: 60vw; 
+        }
+        #grad div{
+            width: 60vw;
+            position: absolute;
+            top: 40vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 4px 5px 4px rgb(146, 145, 148);
+            border-radius:20px;
+            padding: 20px;
+            background: url("back.jpg");
+        }
+     li{
+         list-style: none;
+         text-align: center;
+          font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+         font-size: 1.5rem;
+     }
+     h2{
+         text-align: center;
+         font-size: 2rem;
+         color: rgb(224, 77, 150);
+         font-family: Verdana, Geneva, Tahoma, sans-serif;
+     }
+     p{
+         text-align: center;
+         margin: 20px;
+         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+         font-size: 1.4rem;
+     }
+     span{
+         color: blue;
+         
+     }
+     #prim{
+         display: none;
+         
+     }
+     
+     #sec{
+         display: none;
+         
+     }
+     #hsec{
+         display: none;
+         
+     }
+     #grad{
+         display: none;
+         
+     }
+     .ac{
+         background-color: rgb(247, 138, 36);
+         width: 50vw;
+     }
+     * {
+            width: 100vw;
+            margin: 0px;
+            padding: 0px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <section id="sect">
+        <ul>
+            <li class="sectItem" onclick="display(prim,sec,hsec,grad)">Primary Education</li>
+            <li class="sectItem" onclick="display(sec,prim,hsec,grad)">Secondary Education</li>
+            <li class="sectItem" onclick="display(hsec,prim,sec,grad)">High Secondary Education</li>
+            <li class="sectItem" onclick="display(grad,hsec,prim,sec)">Graduation</li>
+
+        </ul>
+    </section>
+    <div class="def">
+        <p>Click above to view !!</p>
+    </div>
+    <section id="prim">
+        <div class="primItem">
+            <h2>Primary Education Details</h2>
+            <p>
+                I have Completed my Primary Education from my village Z.P. School in Marathi medium.
+                Generally, village school's never bother about percentage, same happened with me. Therefore, I never thought seriously about compitative exams. So, Dispite of Appearing for so many compitative exams ,there is only one compitative exam that I have clared with a selection.
+                <li><strong>School Name :</strong> Z.P.C.P.S. Satala</li>
+                <li><strong>STD :</strong> Std. 1 to Std. 7</li><br>
+                <li class="ac"><strong>Achievements :</strong> Selected for Navodaya Lateral Entry in 9th Std. through Entrance Test</li>
+            </p>
+        </div>
+        
+    </section>
+    <section id="sec">
+        <div class="secItem">
+            <h2>Secondary Education Details</h2>
+            <p>
+                I have Completed my Secondary Education from JNV, Latur.
+              I am a Navodaya Student. <span>#Navodayan</span>
+                <li><strong>School Name :</strong> Jawahar Navodaya Vidyalaya, Latur</li>
+                <li><strong>Board :</strong> CBSE/NCERT</li>
+                <li><strong>Class 9th Score :</strong> 89.20%</li>
+                <li><strong>Class 10th Score :</strong> 92.80%</li><br>
+                <li class="ac"><strong>Achievements :</strong> <br> 1. Qualified for Dakshana NDST <br> 2. Appeared for TATA KARTA initiative interviews. <br> 3. Selected for Avanti Learning Center (IIT JEE prep.) <br> 4. Played Khelo India state level Cricket Championship.</li>
+            </p>
+        </div>
+        
+    </section>
+    <section id="hsec">
+        <div class="hsecItem">
+            <h2>High Secondary Education Details</h2>
+            <p>
+                I have Completed my High Secondary Education from JNV, Latur.
+              I am a Navodaya Student. <span>#Navodayan</span>
+                <li><strong>School Name :</strong> Jawahar Navodaya Vidyalaya, Latur</li>
+                <li><strong>Board :</strong> CBSE/NCERT</li>
+                <li><strong>Stream :</strong> Science (PCM)</li>
+                <li><strong>Class 11th Score :</strong> 88.60%</li>
+                <li><strong>Class 12th Score :</strong> 95.20%</li>
+                <li><strong>JEE Mains percentile :</strong> 96.199</li>
+                <li><strong>JEE Advanced Rank :</strong> 19734</li><br>
+                <li class="ac"><strong>Achievements :</strong> <br> 1.Navodaya Nation Level Cricket meet,2019  <br> 2. Qualified JEE Mains and JEE Advanced. <br> 3. Got IIIT Kottayam in CSE branch</li>
+            </p>
+        </div>
+        
+    </section>
+    <section id="grad">
+        <div class="gradItem">
+            <h2>Graduation Details</h2>
+            <p>
+                I am currently pursuing my B.Tech Degree from IIIT Kottayam, <span>A College of National Importance</span>, in CSE branch and Cyber specialization.
+              I am a IIITK'25 Student. <span>#IIITian</span>
+                <li><strong>College Name :</strong> Indian Institute of Information Technology, Kottayam</li>
+                <li><strong>Branch :</strong> Computer Science and Engineering</li>
+                <li><strong>Specialization :</strong> Cyber Security</li>
+                <li><strong>Ongoing Semester :</strong> First</li><br>
+                <li class="ac"><strong>Achievements :</strong> <br> Typing.........</li>
+            </p>
+        </div>
+        
+    </section>
+    <script>
+        function display(x,y,z,w){
+            x.style.display='flex';
+            y.style.display='none';
+            z.style.display='none';
+            w.style.display='none';
+        }
+    </script>
+</body>
+
+</html>
